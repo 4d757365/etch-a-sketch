@@ -10,5 +10,31 @@
 </head>
 <body>
     
+    <div class="container">
+        <div class="title"><h1>Etch-A-Sketch</h1></div>
+        <div class="status">Active</div>
+        <div class="content">
+            <div class="board">
+
+            </div>
+            <div class="buttons">
+                <button onclick="changeColorMode('black')">Black</button>
+                <button onclick="changeColorMode('red')">Red</button>
+                <button onclick="changeColorMode('green')">Green</button>
+                <button onclick="changeColorMode('blue')">Blue</button>
+                <button onclick="changeColorMode('white')">Eraser</button>
+                <button onclick="changeColorMode('random')">Random</button>
+                <button onclick="resetBoard()">Reset</button>
+            </div>
+            <div class="slider">
+                <div class="size">
+                    Change Size:
+                </div>
+                <input type="range" min="4" max="100" value="16" class="slider" onchange="changeSize(this.value)">
+                <div class="value">16</div>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
