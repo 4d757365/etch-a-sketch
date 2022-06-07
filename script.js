@@ -20,11 +20,11 @@ document.querySelector("body").addEventListener('click', (e) => {
         
         if(isClicked)
         {
-            document.querySelector('.status').textContent = 'Active';
+            document.querySelector('.status').textContent = 'Drawing';
         }
         else
         {
-            document.querySelector('.status').textContent = 'Not Active';
+            document.querySelector('.status').textContent = 'Not Drawing';
 
         }
     }
@@ -38,6 +38,7 @@ function createBoard(size)
     squares.forEach((div) => div.remove());
     board.style.gridTemplateColumns = `repeat(${size} , 1fr)`;
     board.style.gridTemplateRows = `repeat(${size} , 1fr)`;
+    
 
 
     let fullSize = size * size;
@@ -47,6 +48,7 @@ function createBoard(size)
         let square = document.createElement('div');
         square.addEventListener('mouseover', changeSquareColor);
         square.style.backgroundColor = 'white';
+        square.style.border = '1px solid rgba(0, 0, 0, 0.1)';
         board.insertAdjacentElement('beforeend', square);
 
     }

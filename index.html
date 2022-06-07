@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Etch-A-Sketch</title>
 </head>
 <body>
-    
+    <div class="title"><h1>Etch-A-Sketch</h1></div>
+    <div class="status">Drawing</div>
     <div class="container">
-        <div class="title"><h1>Etch-A-Sketch</h1></div>
-        <div class="status">Active</div>
         <div class="content">
+            <div class="buttons">
+                <button onclick="changeColorMode('#0000')" class="button black trans">Black</button>
+                <button onclick="changeColorMode('#eb3941')" class=" button red trans">Red</button>
+                <button onclick="changeColorMode('#0ba360')" class="button green trans">Green</button>
+                <button onclick="changeColorMode('#25aae1')" class="button blue trans">Blue</button>
+                <button onclick="changeColorMode('#fff')" class="button eraser trans">Eraser</button>
+                <button onclick="changeColorMode('random')" class="button rand trans">Random</button>
+                <button onclick="resetBoard()" class="button reset trans">Reset</button>
+            </div>
             <div class="board">
 
             </div>
-            <div class="buttons">
-                <button onclick="changeColorMode('black')">Black</button>
-                <button onclick="changeColorMode('red')">Red</button>
-                <button onclick="changeColorMode('green')">Green</button>
-                <button onclick="changeColorMode('blue')">Blue</button>
-                <button onclick="changeColorMode('white')">Eraser</button>
-                <button onclick="changeColorMode('random')">Random</button>
-                <button onclick="resetBoard()">Reset</button>
-            </div>
-            <div class="slider">
+            <div class="controls">
                 <div class="size">
                     Change Size:
                 </div>
-                <input type="range" min="4" max="100" value="16" class="slider" onchange="changeSize(this.value)">
-                <div class="value">16</div>
-                
+                <div>
+                    <input type="range" min="4" max="100" value="16" class="slider" onchange="changeSize(this.value)">
+                    <div class="value" style="margin: 15px;">16</div>
+                </div>
             </div>
+        
         </div>
     </div>
 </body>
